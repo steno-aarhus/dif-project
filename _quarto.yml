@@ -1,17 +1,15 @@
+project:
+  type: website
+  render: "index.qmd"
+
+website:
+  title: "Data Infrastructure Framework Project"
+  navbar:
+    background: primary
+    left:
+      - href: index.qmd
+        text: Home
 name: "dif-project"
-title: "Data Infrastructure Framework Project"
-base_url: https://steno-aarhus.github.io/dif-project/
-include:
-    - "README.html"
-    - ".nojekyll"
-exclude:
-    - "LICENSE.md"
-    - "LICENSE.html"
-    - "DESCRIPTION"
-    - "misc"
-    - "resources"
-    - "R"
-    - "data"
 description: |
   Application to the Novo Nordisk Foundation Data Science Research Infrastructure grant.
 output_dir: "docs"
@@ -27,7 +25,9 @@ navbar:
     - icon: "fab fa-twitter"
       href: "https://twitter.com/StenoAarhusRes"
   source_url: true
-output:
-    distill::distill_article:
-        toc: true
-        toc_depth: 2
+format:
+  html:
+    theme: cosmo
+    css: theme.css
+    toc: true
+    toc_depth: 2
